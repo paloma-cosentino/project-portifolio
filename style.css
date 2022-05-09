@@ -45,6 +45,7 @@ aside {
 #name-card img {
     border-radius: 50%;
     border: solid 0.3rem var(--inner-boder);
+    width: 100%;
 }
 #contact-info {
     margin-top: 0.5rem;
