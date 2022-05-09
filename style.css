@@ -4,44 +4,52 @@
     padding: 0;
     box-sizing: border-box;
 }
+root {
+    --hue: 244;
+    --body-bg-color: hsl(calc(var(--hue) + 1), 14%, 15%);
+    --text-color: hsl(calc(var(--hue) + 5), 15%, 56%);
+    --bg-cards: hsl(var(--hue), 13%, 21%);
+    --bg-techs: hsl(calc(var(--hue) + 83), 35%, 68%);
+    --inner-boder: hsl(calc(var(--hue) - 124), 100%, 50%);
+
+    font-size: 62,5%;
+  }
 body {
     margin: 0;
-    height: 100vh;
-    background-color: #22212C;
-    color: #837E9F; 
+    height: 100%;
+    background-color: var(--body-bg-color);
+    color: var(--text-color); 
     display: grid;
     grid-template-areas: 
     "sidebar content";
-    grid-template-columns: 25vw 75vw;
-    ;
-
+    grid-template-columns: 1fr 3fr;
 }
-.sidebar {
+aside {
     grid-area: sidebar;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
 
 }
 .content {
     grid-area: content;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
 }
-.name-card {
-    background-color: #302F3D;
-    padding: 10px;
+#name-card {
+    background-color: var(--bg-cards);
+    padding: 1rem;
     border-radius: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.name-card img {
+#name-card img {
     border-radius: 50%;
-    border: solid 3px green;
+    border: solid 0.3rem var(--inner-boder);
 }
-.contact-info {
-    margin-top: 5px;
-    background-color: #302F3D;
-    padding: 10px;
+#contact-info {
+    margin-top: 0.5rem;
+    background-color: var(--bg-cards);
+    padding: 1rem;
     border-radius: 10%;
     display: flex;
     flex-direction: column;
@@ -49,90 +57,89 @@ body {
   
 }
 label {
-    margin: 0 30px;
+    margin: 0 3rem;
 }
 a {
-    color: #837E9F;
+    color: var(--text-color);
     text-decoration: none;
 }
 
 .contact-items {
-    margin: 5px;
+    margin: 0.5rem;
     display: flex;
     justify-content: start;
     width: 100%;
-    padding: 0px 10px;
+    padding: 0px 1rem;
     align-items: center;
 }
-.technologies {
-    margin-top: 20px;
-    background-color: #302F3D;
-    padding: 10px;
-    border-radius: 20px;
+
+#technologies {
+    margin-top: 2rem;
+    background-color: var(--bg-cards);
+    padding: 1rem;
+    border-radius: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: start;
-
-   
+    align-items: start; 
 }
  .tech {
-     padding: 0 10px;
-     margin-top: 10px;
+     padding: 0 1rem;
+     margin-top: 1rem;
      display: flex;
      flex-wrap: wrap;
      align-items: center;
  }
  .tech-items {
-     margin: 0 5px;
-     padding: 5px 15px;
-     background-color: #CB92B1;
-     border-radius: 20px;
-     color: #22212C;
+     margin: 0 0.5rem;
+     padding: 0.5rem 1.5rem;
+     background-color: var(--bg-techs);
+     border-radius: 2rem;
+     color: var(--body-bg-color);
      font-weight: bold;
 
  }
- .my-projects {
-    background-color: #302F3D;
-    padding: 10px;
-    border-radius: 15px;
+ #my-projects {
+    background-color: var(--bg-cards);
+    padding: 1rem;
+    border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
  }
- .project {
-     margin: 20px -12px;
+ #project {
+     margin: 2rem -1.2rem;
     border-radius: 10%;
     display: flex;
     flex-direction: row;
     align-items: auto;
  }
- .projeto1 {
+ #projeto1 {
      size-adjust: 37,5vw;
-    margin: 20px 15px;
-    background-color: #302F3D;
-    padding: 10px;
-    border-radius: 20px;
+    margin: 2rem 1.5rem;
+    background-color: var(--bg-cards);
+    padding: 1rem;
+    border-radius: 2rem;
  }
- .projeto2 {
-    margin: 20px;
-    background-color: #302F3D;
-    padding: 10px;
-    border-radius: 20px;
+ #projeto2 {
+    margin: 2rem;
+    background-color: var(--bg-cards);
+    padding: 1rem;
+    border-radius: 2rem;
  }
  .posts {
-    background-color: #302F3D;
-    padding: 10px;
-    border-radius: 15px;
+    background-color: var(--bg-cards);
+    padding: 1rem;
+    border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
  }
  
  .publications {
-    margin-top: 20px;
-    background-color: #302F3D;
-    padding: 10px;
-    border-radius: 15px;
+    margin-top: 2rem;
+    background-color: var(--bg-cards);
+    padding: 1rem;
+    border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -140,9 +147,9 @@ a {
 
  .img2 {
     float: left;
-    margin-right: 10px;
-    border: solid green 2px ;
-    border-radius: 20px;
+    margin-right: 1rem;
+    border: solid var(--inner-boder) 0.2rem ;
+    border-radius: 2rem;
   }
   
   .clearfix::after {
